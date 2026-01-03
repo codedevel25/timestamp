@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const deadline = new Date('31 Dec, 2026');
 
 app.use(cors())
-app.use("/", express.static(__dirname + '/ui/dist/demo/browser'));
+app.use(express.static('public'));
 
 app.get('/api/deadline', (req, res) => {
   res.send({

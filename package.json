@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "cd ui && npm i",
-    "prestart": "cd ui && npm run build",
+    "prestart": "rm -r public && cd ui && npm run build && mv dist/demo/browser ../public/",
     "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
