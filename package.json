@@ -4,6 +4,8 @@
   "description": "Simple timestamp API server",
   "main": "index.js",
   "scripts": {
+    "preinstall": "cd ui && npm i",
+    "prestart": "cd ui && npm run build",
     "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
