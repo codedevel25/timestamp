@@ -7,10 +7,7 @@
     },
     {
       "src": "ui/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "ui/dist/demo/browser"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -20,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/ui/$1"
+      "dest": "/ui/dist/demo/browser/$1"
     }
   ]
 }
