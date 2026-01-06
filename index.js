@@ -2,14 +2,15 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const cameraRoute = require('./api/camera');
-
+const cameraData = require('./api/camera');
 const deadline = new Date('31 Dec, 2026');
 
 app.use(cors())
 app.use(express.static('public'));
 
-app.use('/api/camera', cameraRoute);
+app.get('/api/camera', (req, res) => {
+    res.send(cameraData);
+});
 
 app.get('/api/deadline', (req, res) => {
   res.send({

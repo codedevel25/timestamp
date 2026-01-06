@@ -1,6 +1,3 @@
-const express = require('express');
-
-const router = express.Router();
 const cameraData = [
   {
     name: "Sony Alpha 7V",
@@ -274,9 +271,4 @@ const cameraData = [
   }
 ];
 
-
-router.get('/', (req, res) => {
-    res.send(cameraData);
-});
-
-module.exports = router;
+module.exports = cameraData;
