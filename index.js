@@ -6,7 +6,7 @@ const cameraData = require('./api/camera');
 const deadline = new Date('31 Dec, 2026');
 
 app.use(cors())
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/ui/dist/demo/browser'));
 
 app.get('/api/camera', (req, res) => {
     res.send(cameraData);
